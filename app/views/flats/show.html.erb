@@ -1,0 +1,31 @@
+<div class="background-image" style="background-image: url(<%= @flat.picture_url %>)">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="flat-show-card">
+        <h1 class="card-title"><%= @flat.name %></h1>
+        <p class="card-subtitle"><%= @flat.address %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+      <%= link_to 'back', flats_path %>
+    </div>
+    <div class="col-4">
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <p><%= @flat.number_of_guests %> people  <%= @flat.price_per_night %> €</p>
+      </div>
+      <div class="flat-show-card">
+        <div class="flex-align">
+          <h6>Share</h6>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-pinterest-p"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
