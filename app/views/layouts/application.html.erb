@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsSimpleAirbnb</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>RailsSimpleAirbnb</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <nav class="navbar bg-light">
-  <div class="container-fluid">
-    <%= link_to 'Simple Airbnb', flats_path,class: 'navbar-brand' %>
-    <form class="d-flex" role="search">
-      <%= link_to 'Add flat', new_flat_path, class:"btn btn-outline-success" %>
-    </form>
-  </div>
-</nav>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <%= link_to 'Simple Airbnb', flats_path,class: 'navbar-brand' %>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <%= link_to 'Add flat', new_flat_path, class:"btn btn-outline-primary" %>
+    </div>
+  </nav>
+  <%= yield %>
+</body>
+
 </html>
